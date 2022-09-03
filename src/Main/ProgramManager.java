@@ -1,8 +1,5 @@
 package Main;
 
-import Programs.AbstractProgram;
-import Programs.Task_1.Program_1_1;
-
 import java.lang.reflect.*;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -61,7 +58,7 @@ public class ProgramManager {
         for (ArrayList<String> programBranch : programMatrix) {
             for (int i = 1; i < programBranch.size(); i++){
                 if (Objects.equals(programKey, programBranch.get(0) + programBranch.get(i))) {
-                    program_class = Class.forName("Programs.Task_" + programBranch.get(0) + ".Program_" + programBranch.get(0) + "_" + i);
+                    program_class = Class.forName("Programs.Task_" + programBranch.get(0) + ".SubTask_" + i + ".Launcher");
                     program_class.getDeclaredConstructor().newInstance();
                 };
             }
