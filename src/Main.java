@@ -1,9 +1,6 @@
 import Main.ProgramManager;
-
-import java.lang.reflect.InvocationTargetException;
-
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args){
         ProgramManager programManager = new ProgramManager();
         programManager.outPrograms();
         while (true) {

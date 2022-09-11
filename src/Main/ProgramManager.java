@@ -10,37 +10,12 @@ public class ProgramManager {
 
     Scanner scanner;
     String programKey;
-    Class<?> program_class;
-    ArrayList<ArrayList<String>> programMatrix = new ArrayList<ArrayList<String>>() {
-        {
-            add (new ArrayList<>()
-             {
-                {
-                    add("1");
-                    add(".1");
-                    add(".2 coming soon");
-                    add(".3 coming soon");
-                    add(".4 coming soon");
-                    add(".5 coming soon");
-                }
-             }
-            );
-            add (new ArrayList<>()
-                 {
-                     {
-                         add("2");
-                         add(".1 coming soon");
-                         add(".2 coming soon");
-                     }
-                 }
-            );
-        }
-    };
+    Class<?> programClass;
     public ProgramManager() {
         scanner = new Scanner(System.in);
     }
     public void outPrograms(){
-        for (ArrayList<String> programBranch : programMatrix) {
+        for (ArrayList<String> programBranch : ProgramTree.get()) {
             System.out.println(programBranch.get(0) + ":");
             for (int i = 1; i < programBranch.size(); i++){
                 System.out.println("\t" + programBranch.get(0) + programBranch.get(i));
@@ -57,8 +32,8 @@ public class ProgramManager {
     }
     private boolean tryFindClass(ArrayList<String> programBranch,int subNumber){
         try {
-            program_class = Class.forName("Programs.Task_" + programBranch.get(0) + ".SubTask_" + subNumber + ".Launcher");
-            program_class.getDeclaredConstructor().newInstance();
+            programClass = Class.forName("Programs.Task_" + programBranch.get(0) + ".SubTask_" + subNumber + ".Launcher");
+            programClass.getDeclaredConstructor().newInstance();
             return true;
 
         } catch (ClassNotFoundException | IllegalAccessException | NoSuchMethodException | InstantiationException e) {
@@ -67,9 +42,9 @@ public class ProgramManager {
             throw new RuntimeException(e);
         }
     }
-    public void launch() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public void launch(){
         boolean isSuccessful = false;
-        for (ArrayList<String> programBranch : programMatrix) {
+        for (ArrayList<String> programBranch : ProgramTree.get()) {
             for (int subNumber = 1; subNumber < programBranch.size(); subNumber++){
                 if (Objects.equals(programKey, programBranch.get(0) + programBranch.get(subNumber))) {
                     isSuccessful = tryFindClass(programBranch, subNumber);
