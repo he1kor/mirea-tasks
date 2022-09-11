@@ -5,7 +5,7 @@ public class SubMain {
     public static void main(){
         ArrayList<Integer> array = new ArrayList();
         Input.arrayValues(array);
-        long result = Sum.ofValues(array);
+        long result = Sum.ofArray(array);
         System.out.println("Result: " + result);
     }
 }

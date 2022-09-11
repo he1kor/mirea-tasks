@@ -1,7 +1,18 @@
 package Programs.Task_1.SubTask_2;
 
-public class Launcher {
-    public Launcher(){
-        System.out.println("program 1.2 run!");
+import Programs.AbstractLauncher;
+
+public class Launcher extends AbstractLauncher {
+    @Override
+    protected String getProgramNumber() {
+        return "1.2";
+    }
+    @Override
+    protected String getTechnicalTask() {
+        return "";
+    }
+    @Override
+    protected void launch() {
+
     }
 }

@@ -13,10 +13,10 @@ public class ProgramTree {
                      {
                          add("1");
                          add(".1");
-                         add(".2 coming soon");
-                         add(".3 coming soon");
-                         add(".4 coming soon");
-                         add(".5 coming soon");
+                         add(".2");
+                         add(".3");
+                         add(".4");
+                         add(".5");
                      }
                  }
             );
@@ -24,8 +24,8 @@ public class ProgramTree {
                  {
                      {
                          add("2");
-                         add(".1 coming soon");
-                         add(".2 coming soon");
+                         add(".1");
+                         add(".2");
                      }
                  }
             );

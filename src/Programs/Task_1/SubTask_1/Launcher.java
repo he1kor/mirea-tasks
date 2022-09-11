@@ -1,14 +1,18 @@
 package Programs.Task_1.SubTask_1;
 
-public class Launcher {
-    public Launcher(){
-        System.out.println("\n-------------------------------------\nProgram 1.1 has started running!\n");
-        printTechnicalTask();
-        SubMain.main();
-        System.out.println("\nProgram 1.1 has finished!\n-------------------------------------\n");
+import Programs.AbstractLauncher;
+
+public class Launcher extends AbstractLauncher {
+    @Override
+    protected String getProgramNumber(){
+        return "1.1";
     }
-    private void printTechnicalTask(){
-        System.out.println("Technical task:");
-        System.out.println("Написать программу, в результате которой считается сумма элементов целочисленного массива с помощью циклов for, while, do while, результат выводится на экран.\n");
+    @Override
+    protected String getTechnicalTask() {
+        return "Написать программу, в результате которой считается сумма элементов целочисленного массива с помощью циклов for, while, do while, результат выводится на экран.\n";
+    }
+    @Override
+    protected void launch() {
+        SubMain.main();
     }
 }
