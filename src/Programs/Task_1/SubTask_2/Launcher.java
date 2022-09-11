@@ -9,10 +9,10 @@ public class Launcher extends AbstractLauncher {
     }
     @Override
     protected String getTechnicalTask() {
-        return "";
+        return "Написать программу, в результате которой выводятся на экран аргументы командной строки в цикле for";
     }
     @Override
     protected void launch() {
-
+        SubMain.main();
     }
 }

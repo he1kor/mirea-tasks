@@ -9,7 +9,7 @@ public class Launcher extends AbstractLauncher {
     }
     @Override
     protected String getTechnicalTask() {
-        return "Написать программу, в результате которой считается сумма элементов целочисленного массива с помощью циклов for, while, do while, результат выводится на экран.\n";
+        return "Написать программу, в результате которой считается сумма элементов целочисленного массива с помощью циклов for, while, do while, результат выводится на экран.";
     }
     @Override
     protected void launch() {

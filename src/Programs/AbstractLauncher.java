@@ -8,7 +8,7 @@ public abstract class AbstractLauncher {
     public AbstractLauncher(){
         System.out.println("\n-------------------------------------\nProgram " + getProgramNumber() + " has started running!\n");
         System.out.println("Technical task:");
-        System.out.println(getTechnicalTask());
+        System.out.println(getTechnicalTask() + "\n");
         launch();
         System.out.println("\nProgram " + getProgramNumber() + " has finished!\n-------------------------------------\n");
     }

@@ -1,4 +1,4 @@
-package Main;
+package Launcher;
 
 import java.lang.reflect.*;
 import java.util.ArrayList;
