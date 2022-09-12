@@ -10,8 +10,7 @@ public class Input {
         while (true) {
             input = waitInput();
             try {
-                double doubleInput = Double.parseDouble(input);
-                return doubleInput;
+                return Double.parseDouble(input);
             } catch (NumberFormatException e) {
                 System.out.println("Not a number!");
             }

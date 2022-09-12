@@ -12,8 +12,7 @@ public class Input {
         while (true) {
             input = waitInput();
             try {
-                Short integerInput = Short.parseShort(input);
-                return integerInput;
+                return Short.parseShort(input);
             } catch (NumberFormatException e) {
                 System.out.println("Not a number!");
             }

@@ -6,7 +6,7 @@ public class ProgramTree {
     public static ArrayList<ArrayList<String>> get(){
         return programTree;
     }
-    private static ArrayList<ArrayList<String>> programTree = new ArrayList<ArrayList<String>>() {
+    private static final ArrayList<ArrayList<String>> programTree = new ArrayList<ArrayList<String>>() {
         {
             add (new ArrayList<>()
                  {
@@ -43,6 +43,14 @@ public class ProgramTree {
                  {
                      {
                          add("4");
+                         add(".1");
+                     }
+                 }
+            );
+            add (new ArrayList<>()
+                 {
+                     {
+                         add("5");
                          add(".1");
                      }
                  }
