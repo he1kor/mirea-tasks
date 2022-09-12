@@ -44,7 +44,6 @@ public class ProgramTree {
                      {
                          add("4");
                          add(".1");
-                         add(".2");
                      }
                  }
             );
