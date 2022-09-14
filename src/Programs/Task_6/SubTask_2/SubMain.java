@@ -1,4 +1,4 @@
-package Programs.Task_6.SubTask_1;
+package Programs.Task_6.SubTask_2;
 
 public class SubMain {
     public static void main(){

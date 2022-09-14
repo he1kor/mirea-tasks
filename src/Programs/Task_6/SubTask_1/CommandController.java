@@ -1,9 +1,9 @@
 package Programs.Task_6.SubTask_1;
 
-public class CommandFork {
-    Controller controller;
-    public CommandFork(){
-        controller = new Controller();
+public class CommandController {
+    MapController controller;
+    public CommandController(){
+        controller = new MapController();
     }
     public boolean doActionCommand(Command command){
         if (command.is("Create")){

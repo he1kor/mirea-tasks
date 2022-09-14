@@ -60,6 +60,7 @@ public class ProgramTree {
                      {
                          add("6");
                          add(".1");
+                         add(".2");
                      }
                  }
             );

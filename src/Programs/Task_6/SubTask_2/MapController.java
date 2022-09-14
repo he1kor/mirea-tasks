@@ -1,16 +1,14 @@
-package Programs.Task_6.SubTask_1;
+package Programs.Task_6.SubTask_2;
 
-
-import Programs.Task_4.SubTask_1.Shape;
 
 import java.util.ArrayList;
 
-public class Controller implements Movable {
+public class MapController implements Movable {
 
     private ArrayList<MovableShape> shapes;
     private MovableShape selectedShape;
 
-    public Controller (){
+    public MapController(){
         shapes = new ArrayList<>();
     }
     public void createShape(MovableShape shape){
