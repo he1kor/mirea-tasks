@@ -8,7 +8,7 @@ public class DisplayGraphics extends Canvas {
     ArrayList<Shape> shapes = new ArrayList<>();
     public void paint(Graphics graphics){
         this.graphics = graphics;
-        setBackground(Color.BLUE);
+        setBackground(new Color(0xDFCCCC));
         paintShapes(graphics);
     }
     public void setBounds(int x, int y, int width, int height){
@@ -22,6 +22,5 @@ public class DisplayGraphics extends Canvas {
     public void setShapes(ArrayList<Shape> shapes) {
         this.shapes = shapes;
         repaint();
-        System.out.println("addded " + this.shapes.size() + " x: " + this.shapes.get(shapes.size()-1).point.x + " y: " + this.shapes.get(shapes.size()-1).point.y);
     }
 }
