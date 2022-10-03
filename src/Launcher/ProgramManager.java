@@ -23,7 +23,7 @@ public class ProgramManager {
         }
     }
     public void inputProgram(){
-        System.out.println("Input program you want to run: ");
+        System.out.println("Input program you want to run (or \"stop\" to exit program): ");
         String programNumber = scanner.nextLine();
         setProgram(programNumber);
     }
@@ -42,8 +42,12 @@ public class ProgramManager {
             throw new RuntimeException(e);
         }
     }
-    public void launch(){
+    //launches program that was entered. If answer is "stop" then launch return true, else false.
+    public boolean launch(){
         boolean isSuccessful = false;
+        if (Objects.equals(programKey.toLowerCase(), "stop")){
+            return true;
+        }
         for (ArrayList<String> programBranch : ProgramTree.get()) {
             for (int subNumber = 1; subNumber < programBranch.size(); subNumber++){
                 if (Objects.equals(programKey, programBranch.get(0) + programBranch.get(subNumber))) {
@@ -54,6 +58,7 @@ public class ProgramManager {
         if (!isSuccessful){
             printNotFoundException();
         }
+        return false;
     }
 
     private void printNotFoundException(){

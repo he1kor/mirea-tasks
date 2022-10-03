@@ -1,18 +1,15 @@
 import Launcher.Args;
 import Launcher.ProgramManager;
 public class Main {
-    public static String[] args;
+    private static boolean isEnded;
+
     public static void main(String[] args){
         Args.set(args);
         ProgramManager programManager = new ProgramManager();
         programManager.outPrograms();
-        while (true) {
+        while (!isEnded) {
             programManager.inputProgram();
-            programManager.launch();
+            isEnded = programManager.launch();
         }
-    }
-
-    public static String[] getArgs() {
-        return args;
     }
 }
