@@ -22,6 +22,6 @@ public class Oval extends Shape {
     @Override
     public void draw(Graphics graphics) {
         graphics.setColor(color);
-        graphics.drawOval(point.x,point.y,width,height);
+        graphics.fillOval(point.x,point.y,width,height);
     }
 }

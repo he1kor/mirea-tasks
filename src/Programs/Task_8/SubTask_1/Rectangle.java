@@ -22,6 +22,6 @@ public class Rectangle extends Shape{
     @Override
     public void draw(Graphics graphics) {
         graphics.setColor(color);
-        graphics.drawRect(point.x,point.y,width,height);
+        graphics.fillRect(point.x,point.y,width,height);
     }
 }

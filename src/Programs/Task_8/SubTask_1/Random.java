@@ -34,7 +34,7 @@ public class Random {
         int height = getInRange(minHeight,maxHeight);
         maxX -= width;
         maxY -= height;
-        int x = getInRange(minX,maxY);
+        int x = getInRange(minX,maxX);
         int y = getInRange(minY,maxY);
         Color color = getColor();
         return new ShapeRectType(x,y,color,width,height);

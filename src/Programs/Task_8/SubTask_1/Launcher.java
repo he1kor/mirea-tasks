@@ -10,7 +10,8 @@ public class Launcher extends AbstractLauncher {
 
     @Override
     protected String getTechnicalTask() {
-        return null;
+        isEnteredAfterTask = false;
+        return "Создать окно, нарисовать в нем 20 случайных фигур, случайного цвета. Классы фигур должны наследоваться от абстрактного класса Shape, в котором описаны свойства фигуры: цвет, позиция.";
     }
 
     @Override
