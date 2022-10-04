@@ -4,9 +4,11 @@ import jdk.nashorn.api.tree.GotoTree;
 
 import java.io.File;
 import java.util.InputMismatchException;
+import java.util.Objects;
 import java.util.Scanner;
-
 public class Input {
+
+    protected static final String NO_QUESTION = "-1";
     private static final Scanner scanner = new Scanner(System.in);
     public static String getString(){
         return scanner.nextLine();
@@ -44,7 +46,7 @@ public class Input {
 
     public static int getInt(String question,String errorMassage) {
         int answer;
-        System.out.println(question);
+        if (!Objects.equals(question, NO_QUESTION)) System.out.println(question);
         while (true) {
             try {
                 answer = Integer.parseInt(scanner.nextLine());
@@ -66,6 +68,7 @@ public class Input {
                 break;
             } else {
                 System.out.println(mistakeMessage);
+                question = NO_QUESTION;
             }
         }
         return answer;

@@ -37,6 +37,9 @@ public class Window implements Runnable{
     }
 
     public void nextFrame() {
+        while (icon == null){
+            Thread.onSpinWait();
+        }
         icon.setImage(animation.nextFrame());
         frame.repaint();
     }
