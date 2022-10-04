@@ -84,6 +84,14 @@ public class ProgramTree {
                      }
                  }
             );
+            add (new ArrayList<>()
+                 {
+                     {
+                         add("9");
+                         add(".1");
+                     }
+                 }
+            );
         }
     };
 }
