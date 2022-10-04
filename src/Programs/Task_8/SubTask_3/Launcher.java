@@ -1,17 +1,16 @@
-package Programs.Task_8.SubTask_2;
+package Programs.Task_8.SubTask_3;
 
 import Programs.AbstractLauncher;
 
 public class Launcher extends AbstractLauncher {
     @Override
     protected String getProgramNumber() {
-        return "8.2";
+        return "8.3";
     }
 
     @Override
     protected String getTechnicalTask() {
-        isEnteredAfterTask = false;
-        return "Создать окно, отобразить в нем картинку, путь к которой указан в аргументах командной строки.";
+        return "Создать окно, реализовать анимацию, с помощью картинки, состоящей из нескольких кадров";
     }
 
     @Override

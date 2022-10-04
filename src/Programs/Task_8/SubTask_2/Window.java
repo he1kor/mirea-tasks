@@ -12,18 +12,16 @@ public class Window implements Runnable {
         JFrame frame = new JFrame(PictureArg.getPathFromArg());
         PictureArg myPicture = new PictureArg();
         JLabel pictureLabel = new JLabel(new ImageIcon(myPicture.getPicture()));
-
         frame.add(pictureLabel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setResizable(false);
         frame.setVisible(true);
 
+        frame.pack();
         frame.addWindowListener (new WindowAdapter() {
             public void windowClosing (WindowEvent e) {
                 SubMain.onWindowClosed();
             }
         });
-
-        frame.pack();
     }
 }
