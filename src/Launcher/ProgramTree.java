@@ -92,6 +92,22 @@ public class ProgramTree {
                      }
                  }
             );
+            add (new ArrayList<>()
+                 {
+                     {
+                         add("10");
+                         add(".1");
+                     }
+                 }
+            );
+            add (new ArrayList<>()
+                 {
+                     {
+                         add("13");
+                         add(".1");
+                     }
+                 }
+            );
         }
     };
 }
